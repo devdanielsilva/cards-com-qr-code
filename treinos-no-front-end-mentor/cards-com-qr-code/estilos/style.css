@@ -105,11 +105,11 @@ section.qr-code #container #linha .col .card .text span {
 /*O @media screen and (max-width: 798px), serve para dizer que quando o site estiver nessa largura, inves dos cards ficar na horinzotal, ele vai ficar na vertical, no caso uma coluna na vertical.*/
 @media screen and (max-width: 768px) {
     section.qr-code #container #linha .col .card {
-        margin-left: 0%;
-        margin-bottom: 32px;
-    }
-
-    section.qr-code #container #linha .col .card:last-child {
-        margin-bottom: 0%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 7px;
+        margin-left: 16%;
+        margin-bottom: 10px;
     }
 }
