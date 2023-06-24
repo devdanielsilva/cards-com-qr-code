@@ -1,0 +1,115 @@
+/*O seletor * com sinal de astérisco, serve para eliminar as configurações que o navegador te dar por padrão. */
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    /*A cor F6F9FF que eu coloquei no body, é um branco levemente azulado. */
+    background-color: #eef2fa;
+    color: #434343;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+
+}
+
+section.qr-code {
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+}
+
+section.qr-code {
+    margin: 16px;
+}
+
+section.qr-code #container {
+    text-align: center;
+}
+
+section.qr-code #container #linha {
+    margin-left: 0%;
+    margin-right: 0%;
+}
+
+section.qr-code #container #linha .col .card {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 1.5rem;
+    border-radius: 17px;
+    max-width: 250px;
+    margin-left: 16px;
+
+    /*box-shadow serve para a sombra de um elemento.
+    O primeiro valor, o 20px, serve para o eixo x, o segundo valor, o 20px serve para o eixo y.
+    O terceiro valor, o 50px, serve para o blur da sombra.(O efeito blur, termo que vem do inglês e significa borrar, que nesse caso serve )
+    O quarto valor, o -30px nesse caso aqui, é o spreading que é o deslocamento e quando você colocar o valor é adicionado em negativo, impede que ele vá muito para as laterais.
+    */
+    box-shadow: 20px 20px 50px -30px #8ec0f5;
+}
+
+/*Esse seletor, section#qr-code div.container div.card icon, é da div icon das imagens da div card.*/
+section.qr-code #container #linha .col .card .icon {
+    width: 198px;
+    height: 200px;
+    margin: 5px 15px 10px 15px;
+
+}
+
+section.qr-code #container #linha .col .card img {
+    width: 100%;
+    border-radius: 12px;
+}
+
+section.qr-code #container #linha .col .card .text {
+    padding: 22px 10px;
+}
+
+section.qr-code #container #linha .col .card .text h5 {
+    color: hsl(218, 44%, 22%);
+
+    /*O font-size em 100% é uma boa prática para quando deixamos os cards e o site em si, responsivos.*/
+    font-size: 100%;
+
+    /*margin: 16px serve para a vertical, em cima e em baixo. E 0px serve para horizontal.*/
+    margin: 16px 0px;
+
+    /*O text-tranform: uppercase, serve para deixar o texto em maíusculo.*/
+    text-transform: uppercase;
+}
+
+section.qr-code #container #linha .col .card .text span {
+    /*O color serve para definir a cor do texto.*/
+    color: hsl(220, 15%, 55%);
+
+    /*O font-weight, serve para deixar o a fonte do texto fina.*/
+    font-weight: 300px;
+
+    /*O max-width, serve para fazer o texto do card quebre, que ele ocupe um determinado tamanho.*/
+
+
+    /*O font-size serve para definir o tamanho da fonte do texto parágrafo do texto. E os 80%, é para deixar a fonte do texto com 80% do tamanho.*/
+    font-size: 80%;
+}
+
+/*Em baixo são as configurações para deixar o site responsivo.*/
+/*O @media screen and (max-width: 798px), serve para dizer que quando o site estiver nessa largura, inves dos cards ficar na horinzotal, ele vai ficar na vertical, no caso uma coluna na vertical.*/
+@media screen and (max-width: 768px) {
+    section.qr-code #container #linha .col .card {
+        margin-left: 0%;
+        margin-bottom: 32px;
+    }
+
+    section.qr-code #container #linha .col .card:last-child {
+        margin-bottom: 0%;
+    }
+}
